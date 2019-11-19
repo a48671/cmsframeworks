@@ -10,7 +10,7 @@ class StaticMenu extends PureComponent {
             <div className='static-menu'>
                 {
                     data.map((item, index) => (
-                        <div className="static-menu__item">
+                        <div key={index} className="static-menu__item">
                             <NavLink className="static-menu__link" to={item.href}>
                                 <div className="static-menu__icon">
                                     {icons[item.icon]()}

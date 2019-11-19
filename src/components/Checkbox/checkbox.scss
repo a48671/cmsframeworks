@@ -1,0 +1,31 @@
+@import '../../scss/variables';
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  border: 1px solid $red;
+  background-color: transparent;
+  transition: .3s;
+  &:after {
+    display: block;
+    content: '';
+    width: 12px;
+    height: 5px;
+    margin: -3px -1px 0 0;
+    border-left: 1px solid $white;
+    border-bottom: 1px solid $white;
+    transform: rotate(-45deg) scale(0);
+    cursor: pointer;
+    transition: .3s;
+  }
+  &.active {
+    background-color: $red;
+    &:after {
+      transform: rotate(-45deg) scale(1);
+    }
+  }
+}

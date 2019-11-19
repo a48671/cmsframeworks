@@ -4,8 +4,9 @@ import './app.scss';
 import Logo from "./components/Logo";
 import Menu from "./components/Menu";
 import StaticMenu from "./components/StaticMenu";
+import Instruments from "./components/Instruments";
 
-const Instruments = () => (<div>Instruments</div>)
+
 const Favorites = () => (<div>Favorites</div>)
 const NotFound = () => (<div>NotFound</div>)
 

@@ -1,0 +1,53 @@
+@import '../../scss/variables';
+
+.instrument-item {
+  position: relative;
+  padding-left: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  &__star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    g {
+      fill: $red;
+      stroke: $red;
+    }
+  }
+  &__icon {
+    width: 30px;
+    img {
+      width: 100%;
+    }
+  }
+  &__name {
+    display: block;
+    padding-left: 20px;
+    width: 300px;
+    font-weight: 900;
+  }
+  &__projects {
+    width: 150px;
+  }
+  &__rating {
+    width: 200px;
+  }
+  &__compare {
+    width: 100px;
+  }
+  &__sponsor {
+    width: 10px;
+  }
+}
+
+.instrument-item__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70px;
+  border-bottom: 1px solid $greyLight;
+}
