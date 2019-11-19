@@ -1,0 +1,41 @@
+@import "./scss/variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+  font-weight: 400;
+  color: $black;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: $greyLight;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  display: block;
+  width: 240px;
+  padding: 30px;
+  hr {
+    height: 1px;
+    background: $black;
+    opacity: .1;
+    margin: 30px 0;
+  }
+}
+
+.content {
+  display: block;
+  width: calc(100% - 240px);
+  background-color: $white;
+  box-shadow: -3px 0 18px 3px rgba(0, 0, 0, .1);
+  padding: 30px 50px;
+  border-radius: 0 0 0 4px;
+}

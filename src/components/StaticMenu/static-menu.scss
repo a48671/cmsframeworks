@@ -1,0 +1,70 @@
+@import "../../scss/variables";
+
+.static-menu {
+  display: block;
+}
+
+.static-menu__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.static-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px 0;
+  text-decoration: none;
+  font-weight: 400;
+  &.active {
+    .static-menu__text {
+      color: $red;
+      text-decoration-line: underline;
+    }
+    g {
+      stroke: $red;
+    }
+  }
+  &:hover {
+    .static-menu__text {
+      color: $red;
+    }
+    g {
+      stroke: $red;
+    }
+  }
+}
+
+.static-menu__icon {
+  display: flex;
+  width: 16px;
+  justify-content: center;
+  align-items: center;
+  g {
+    stroke: $black;
+    transition: 0.3s;
+  }
+}
+
+.static-menu__text {
+  font-size: 13px;
+  transition: 0.3s;
+  color: $black;
+  font-weight: 400;
+  padding-left: 15px;
+}
+
+.static-menu__quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: $white;
+  background-color: $red;
+  font-size: 14px;
+  font-weight: 200;
+  font-family: $font;
+}

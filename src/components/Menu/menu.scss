@@ -1,0 +1,18 @@
+@import "../../scss/variables";
+
+.menu__link {
+  display: block;
+  margin: 20px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 12px;
+  transition: 0.3s;
+  &.active {
+    color: $red;
+    text-decoration-line: underline;
+  }
+  &:hover {
+    color: $red;
+  }
+}

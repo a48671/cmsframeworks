@@ -1,0 +1,39 @@
+@import "../../scss/variables";
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin: 20px 0 55px;
+}
+
+.logo__cms {
+  display: flex;
+  background-color: $red;
+  color: $white;
+  width: 77px;
+  height: 48px;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: $font;
+}
+
+.logo__text {
+  padding-left: 8px;
+}
+
+.logo__title {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 900;
+  margin-bottom: 3px;
+}
+
+.logo__description {
+  font-size: 9px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
