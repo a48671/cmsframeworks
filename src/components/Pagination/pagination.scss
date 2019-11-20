@@ -1,0 +1,37 @@
+@import '../../scss/variables';
+
+.pagination {
+  display: flex;
+  margin: 30px auto;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+  &__page {
+    display: block;
+    font-size: 26px;
+    font-weight: 600;
+    color: $grey;
+  }
+  &__arrow {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-left: 2px solid $red;
+    border-bottom: 2px solid $red;
+    cursor: pointer;
+    &.hidden {
+      pointer-events: none;
+      opacity: 0;
+    }
+    &:hover {
+      border-left: 2px solid $grey;
+      border-bottom: 2px solid $grey;
+    }
+    &.prev {
+      transform: rotate(45deg);
+    }
+    &.next {
+      transform: rotate(-135deg);
+    }
+  }
+};

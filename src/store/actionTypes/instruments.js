@@ -1,1 +1,2 @@
 export const SET_INSTRUMENTS = 'SET_INSTRUMENTS';
+export const SET_FAVORITES = 'SET_FAVORITES';

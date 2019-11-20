@@ -1,9 +1,8 @@
-import { SET_INSTRUMENTS } from '../actionTypes/instruments';
+import {SET_FAVORITES, SET_INSTRUMENTS} from '../actionTypes/instruments';
 
 const initialState = {
-    instruments: {
-
-    }
+    instruments: {},
+    favorites: []
 };
 
 export default  (state = initialState, action) => {
@@ -15,7 +14,12 @@ export default  (state = initialState, action) => {
             return {
                 ...state,
                 instruments: {...payload}
-            }
+            };
+        case SET_FAVORITES :
+            return {
+                ...state,
+                favorites: {...payload}
+            };
         default :
             return state;
     }

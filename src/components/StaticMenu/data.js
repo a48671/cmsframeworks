@@ -3,16 +3,18 @@ export const data = [
         title: 'Избранное',
         href: '/favorites',
         icon: 'star',
-        quantity: 3
+        alias: 'favorites'
     },
     {
         title: 'Поиск',
         href: '/search',
-        icon: 'search'
+        icon: 'search',
+        alias: 'search'
     },
     {
         title: 'Кабинет агенства',
         href: '/cabinet',
-        icon: 'cabinet'
+        icon: 'cabinet',
+        alias: 'cabinet'
     },
 ];

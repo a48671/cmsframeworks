@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import './static-menu.scss';
 import { data } from './data';
@@ -6,6 +7,11 @@ import { icons } from '../Icons';
 
 class StaticMenu extends PureComponent {
     render() {
+
+        const { favorites } = this.props;
+
+        const favoritesCount = Object.keys(favorites).length;
+
         return (
             <div className='static-menu'>
                 {
@@ -17,7 +23,7 @@ class StaticMenu extends PureComponent {
                                 </div>
                                 <div className="static-menu__text">{item.title}</div>
                             </NavLink>
-                            {item.quantity && <div className="static-menu__quantity">{item.quantity}</div>}
+                            {item.alias === 'favorites' && <div className="static-menu__quantity">{favoritesCount}</div>}
                         </div>
                     ))
                 }
@@ -26,4 +32,8 @@ class StaticMenu extends PureComponent {
     }
 }
 
-export default StaticMenu;
+const mapStateToProps = state => ({
+    favorites: state.instruments.favorites
+});
+
+export default connect(mapStateToProps)(StaticMenu);
